@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Для Hostinger не потрібен output: 'export'
   trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
@@ -11,13 +10,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Налаштування для продакшену
   poweredByHeader: false,
   compress: true,
-  // Оптимізація
-  swcMinify: true,
+  // Видаляємо проблемні налаштування
   experimental: {
-    optimizeCss: true
+    // optimizeCss видаляємо - це експериментальна функція
   }
 }
 
